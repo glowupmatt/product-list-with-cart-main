@@ -45,6 +45,7 @@ export default class CartState {
       existingProduct.count += 1;
       this.cart.set(product.name, existingProduct);
     }
+    console.log(this.cart);
     this.notify();
   }
 

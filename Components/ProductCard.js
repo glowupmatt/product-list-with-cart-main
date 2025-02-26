@@ -92,13 +92,11 @@ export default class ProductCard {
     const itemInCart = this.cartState.getItemCount(this.product);
     const { $updateItemInCart, $cardButton } = this.addToCartButton;
 
-    // Update quantity display
     const quantityDisplay = $updateItemInCart.querySelector(".cart-details");
     if (quantityDisplay) {
       quantityDisplay.textContent = itemInCart;
     }
 
-    // Toggle visibility
     $updateItemInCart.hidden = itemInCart === 0;
     $cardButton.hidden = itemInCart > 0;
   }
